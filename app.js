@@ -197,7 +197,7 @@ function saveExpenses() {
 }
 
 function fmt(n) {
-  return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  return '₹' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
 function fmtDate(iso) {
