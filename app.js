@@ -17,12 +17,10 @@ const BAR_COLORS = [
   '#3b82f6','#8b5cf6','#ec4899','#14b8a6','#94a3b8'
 ];
 
-// ── State ──────────────────────────────────────────────
 let expenses = loadExpenses();
 let pendingDeleteId = null;
 let activeFilter = '';
 
-// ── DOM refs ──────────────────────────────────────────
 const form            = document.getElementById('expenseForm');
 const descInput       = document.getElementById('description');
 const amountInput     = document.getElementById('amount');
@@ -41,11 +39,9 @@ const confirmDeleteBtn= document.getElementById('confirmDelete');
 const breakdownSection= document.getElementById('breakdownSection');
 const breakdownList   = document.getElementById('breakdownList');
 
-// ── Init ──────────────────────────────────────────────
 dateInput.value = todayISO();
 render();
 
-// ── Event listeners ───────────────────────────────────
 form.addEventListener('submit', e => {
   e.preventDefault();
   const expense = {
@@ -86,7 +82,6 @@ confirmDeleteBtn.addEventListener('click', () => {
   render();
 });
 
-// ── Render ─────────────────────────────────────────────
 function render() {
   renderSummary();
   renderList();
@@ -180,7 +175,6 @@ function renderBreakdown() {
   });
 }
 
-// ── Helpers ────────────────────────────────────────────
 function closeModal() {
   modalOverlay.classList.remove('active');
   pendingDeleteId = null;
@@ -197,7 +191,7 @@ function saveExpenses() {
 }
 
 function fmt(n) {
-  return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  return '₹' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
 function fmtDate(iso) {

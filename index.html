@@ -8,21 +8,19 @@
 </head>
 <body>
   <div class="app">
-    <!-- Header -->
     <header class="header">
       <h1>Expense Tracker</h1>
       <p class="subtitle">Track your spending with ease</p>
     </header>
 
-    <!-- Summary Cards -->
     <section class="summary">
       <div class="card card--total">
         <span class="card__label">Total Spent</span>
-        <span class="card__amount" id="totalAmount">$0.00</span>
+        <span class="card__amount" id="totalAmount">₹0.00</span>
       </div>
       <div class="card card--month">
         <span class="card__label">This Month</span>
-        <span class="card__amount" id="monthAmount">$0.00</span>
+        <span class="card__amount" id="monthAmount">₹0.00</span>
       </div>
       <div class="card card--count">
         <span class="card__label">Transactions</span>
@@ -30,9 +28,7 @@
       </div>
     </section>
 
-    <!-- Main Content -->
     <main class="main">
-      <!-- Add Expense Form -->
       <section class="form-section">
         <h2 class="section-title">Add Expense</h2>
         <form class="form" id="expenseForm">
@@ -42,7 +38,7 @@
               <input type="text" id="description" placeholder="e.g. Coffee, Rent, Netflix" required />
             </div>
             <div class="form__group">
-              <label for="amount">Amount ($)</label>
+              <label for="amount">Amount (₹)</label>
               <input type="number" id="amount" placeholder="0.00" min="0.01" step="0.01" required />
             </div>
           </div>
@@ -71,7 +67,6 @@
         </form>
       </section>
 
-      <!-- Expense List -->
       <section class="list-section">
         <div class="list-header">
           <h2 class="section-title">Expenses</h2>
@@ -101,14 +96,12 @@
       </section>
     </main>
 
-    <!-- Category Breakdown -->
     <section class="breakdown-section" id="breakdownSection" style="display:none">
       <h2 class="section-title">Category Breakdown</h2>
       <div class="breakdown-list" id="breakdownList"></div>
     </section>
   </div>
 
-  <!-- Delete Confirmation Modal -->
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal">
       <p>Delete this expense?</p>
